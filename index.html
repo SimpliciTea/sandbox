@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>John Ley Sandbox</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="scripts/jssor.slider.mini.js"></script>
+	<script type="text/javascript" src="scripts/processing.min.js"></script>
+
+	
+	<!-- Script to intialize Jssor slider div -->
+	<script>
+		$(document).ready(function ($) {
+			var options = { 
+				$AutoPlay: false,
+				$ArrowNavigatorOptions: {
+                	$Class: $JssorArrowNavigator$,
+                	$ChanceToShow: 2
+                } 
+            };
+			var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+		});
+	</script>
+</head>
+
+
+<body>
+	<header>
+		<h1>John Ley</h1>
+		<span class="title-subtext">.sandbox(play);</span>
+	</header>
+
+
+	<section id="content">
+		<article>
+			<canvas id="fishtank" data-processing-sources="scripts/fishtank.pde" height="400" width="400"></canvas>
+			<section>
+				<h2>Processing.JS exercise: Fishtank</h2>
+				
+				<p>This is my implementation of a KhanAcademy programming project, which can be found <a href="https://www.khanacademy.org/computer-programming/spin-off-of-project-fish-tank/6437543874396160">here</a>.</p>
+
+				<p>It is an example of an HTML5 canvas element being drawn on using the Processing.JS programming language.
+					The advent of the Canvas element in HTML5 brought graphics natively to the web, and so Processing was migrated
+					to be used as a JavaScript library. It's all pretty straightforward once you get the hang of it! </p>
+
+				<p><h3>Features:</h3>
+				<ul>
+					<li>Click to draw randomly generated fish! (size of body, eyes, tail, color of body, tail)</li>
+					<li>Randomly generated seawead using Bezier curves originating from base of canvas frame (try refreshing!)</li>
+				</ul></p>
+
+				<p><h3>Challenges:</h3>
+				<ul>
+					<li>Figuring out how Bezier curves and their control points work!</li>
+					<li>Selecting appropriate ranges for Bezier fn points to draw convincing seaweed</li>
+					<li>Figuring out how to embed the canvas in my own page with Processing.JS</li>
+					<li>...which required setting up my first local webserver using Python!!</li>
+				</ul></p>
+			</section>
+		</article>
+
+
+		<article>
+			<section>
+				<h2>Jssor.JS exercise: jQuery touch-slider</h2>
+				<div id="slider1_container">
+					<!-- Slides Container -->
+					<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 980px; height: 551px;">
+						<div><img u="image" src="images/image1.jpg" /></div>
+						<div><img u="image" src="images/image2.jpg" /></div>
+						<div><img u="image" src="images/image3.jpg" /></div>
+						<div><img u="image" src="images/image4.jpg" /></div>
+						<div><img u="image" src="images/image5.jpg" /></div>
+						<div><img u="image" src="images/image6.jpg" /></div>
+					</div>
+
+					<!-- Arrow Navigator Skin Begin -->
+						<style>
+            				/* jssor slider arrow navigator skin 13 css */
+				            /*
+				            .jssora13l              (normal)
+				            .jssora13r              (normal)
+				            .jssora13l:hover        (normal mouseover)
+				            .jssora13r:hover        (normal mouseover)
+				            .jssora13ldn            (mousedown)
+				            .jssora13rdn            (mousedown)
+				            */
+				            .jssora13l, .jssora13r, .jssora13ldn, .jssora13rdn
+				            {
+				            	position: absolute;
+				            	cursor: pointer;
+				            	display: block;
+				                background: url(images/a13.png) no-repeat;
+				                overflow:hidden;
+				            }
+				            .jssora13l { background-position: -10px -35px; }
+				            .jssora13r { background-position: -70px -35px; }
+				            .jssora13l:hover { background-position: -130px -35px; }
+				            .jssora13r:hover { background-position: -190px -35px; }
+				            .jssora13ldn { background-position: -250px -35px; }
+				            .jssora13rdn { background-position: -310px -35px; }
+				        </style>
+				        <!-- Arrow Left -->
+				        <span u="arrowleft" class="jssora13l" style="width: 40px; height: 50px; top: 0px; left: 0px;">
+				        </span>
+				        <!-- Arrow Right -->
+				        <span u="arrowright" class="jssora13r" style="width: 40px; height: 50px; top: 0px; right: 0px">
+				        </span>
+					<!-- Arrow Navigator Skin End -->
+				</div>
+				<h3 style="text-align: center; margin-top: 12px;">Swipe left or right on a touch device!</h3>
+				
+				<div class="column-container">
+				<div class="column">
+					<h3>Features</h3>
+					<ul>
+						<li>Touch-to-swipe on any touch-responsive device! :)</li>
+						<li>Buttons for left-right navigation if no touch capabilities</li>
+						<li>Simple CSS column layout in this explanation section! (unfortunately, coded to be flexible but not flexible as parent page is static for the slider :|)</li>
+					</ul>
+				</div>
+
+				<div class="column">
+					<h3>Challenges</h3>
+					<ul>
+						<li>[unresolved] Setting a scaling width broke my css; using <em>width: 100%</em> on either the parent container or the slide container left me with two 100px wide distorted images at a time. Images and article width are currently hard-coded to 980px/1000px width respectively. NOT GOOD!</li>
+						<li>Integrating the jssor plugin to my page</li>
+						<li>Using the plugin's documentation to implement the arrow nav provided</li>
+					</ul>
+				</div>
+
+				<div class="column-end">
+					<h3>Afterthoughts</h3>
+					<p>So it's painfully obvious how little I know about design and implementation at this point. I'm trying to bulid this page out as some kind of example of my web development abilities - but it's just so lackluster. Reading through forums and articles documenting web design and development, I'm running into SO many questions that I never would have thought to ask on my own. What editor/OS/web server am I using? Should I be working through a framework like Rails or Django? What are all these plugins to my editor, and how would they improve my workflow? HOLY MOLEY those hotkeys seem amazing and I'm not using them at all! ...it'll be a long journey. :)</p>
+				</div>
+				</div>
+				
+
+			</section>
+		</article>
+	</section>
+
+
+	<footer>
+	</footer>
+</body>
+</html>
