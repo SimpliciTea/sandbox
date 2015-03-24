@@ -60,6 +60,14 @@ p {
 	margin-bottom: 6px;
 }
 
+em {
+	font-weight: 700;
+}
+
+.small {
+	font-size: 9px;
+}
+
 ul {
 	list-style: square outside;
 	position: relative;
@@ -70,7 +78,6 @@ ul {
 li {
 	padding-bottom: .4em;
 	width: auto;
-
 }
 
 header {
@@ -100,6 +107,10 @@ header {
 	margin-right: 2%;
 }
 
+.column p {
+	margin-top: 0px;
+}
+
 .c-end {
 	margin-right: 0px;
 }
@@ -108,6 +119,7 @@ canvas {
 	vertical-align:top;
 	float:right;
 	margin-left: 30px;
+	background:url(../images/fishtank-alt-bg.png);
 }
 
 article {
