@@ -25,21 +25,21 @@ a, a:hover, a:visited {
 }
 
 a {
-	color: #b62f33;
+	color: #2fb6b2;
 }
 
 a:visited {
-	color: #e1abad;
+	color: #b6b22f;
 }
 
 a:hover {
-	color: #cb6d70;
+	color: #5cd5d1;
 }
 
 h2 {
 	font-size: 20px;
 	padding: 10px 10px 12px 10px;
-	text-decoration: underline;
+	text-decoration: none;
 	width:100%;
 	color: #FFF;
 	background-color: #6d1c1e;
@@ -49,6 +49,7 @@ h3 {
 	font-size: 15px;
 	margin-top: 24px;
 	padding-bottom:4px;
+	padding-right:12px;
 }
 
 p, ul, h3 {
@@ -82,11 +83,10 @@ li {
 
 header {
 	margin: auto;
-	margin-top: 40px;
+	padding: 40px 0px 10px 0px;
 	width: 1000px;
 	text-align: left;
 	border-bottom: 3px #b62f33 solid;
-	padding-bottom: 10px;
 }
 
 #content {
@@ -98,6 +98,15 @@ header {
 .column-container {
 	width: 94%;
 	margin: auto;
+}
+
+.column-container:before {
+	height: 1px;
+	background: #CCC;
+	width: 60%;
+	margin: 9px auto;
+	display: block;
+	content: "";
 }
 
 .column {
@@ -159,4 +168,55 @@ footer {
 
 #slides img {
 	max-width:100%;
+}
+
+
+
+/*******************************
+*******************************
+
+These are the styles for 
+the JS/jQ Etchasketch section
+
+*******************************
+********************************/
+
+
+#button-wrap {
+	width: 402px;
+	margin-left: 30px;
+	padding: 0px 0px 6px 0px;
+	float: right;
+}
+
+#etchasketch input[type="text"] {
+	width: 30px;
+}
+
+#button-wrap p {
+	float: left;
+	margin: 0px;
+}
+
+#etchasketch button {
+	float: right;
+}
+
+#sketch-wrap {
+	position: relative;
+	float: right;
+	width: 402px;
+	height: 402px;
+	margin-left: 30px;
+	border: 1px solid black;
+	clear: both;
+	background: #FFF;
+}
+
+.row {
+	clear: left;
+}
+.cell {
+	float: left;
+	background-color: blue;
 }

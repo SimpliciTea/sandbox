@@ -5,18 +5,19 @@
 	<title>John Ley Sandbox</title>
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	
 	<!-- Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
 
 
 	<!-- Javascript -->
 	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="scripts/jssor.slider.mini.js"></script>
 	<script type="text/javascript" src="scripts/processing.min.js"></script>
+	<script type="text/javascript" src="scripts/sketch.js"></script>
 
 	
 	<!-- Script to intialize Jssor slider div -->
@@ -59,36 +60,37 @@
 					The advent of the Canvas element in HTML5 brought graphics natively to the web, and so Processing was migrated
 					to be used as a JavaScript library. It's all pretty straightforward once you get the hang of it! </p>
 
-				<p><h3>Features:</h3>
+				<h3>Features:</h3>
 				<ul>
 					<li>Click to draw randomly generated fish! (size of body, eyes, tail, color of body, tail)</li>
 					<li>Randomly generated seawead using Bezier curves originating from base of canvas frame (try refreshing!)</li>
-				</ul></p>
+				</ul>
 
-				<p><h3>Challenges:</h3>
+				<h3>Challenges:</h3>
 				<ul>
 					<li>Does not render on htmlpreview/rawgit! Due to cross-origin security in browsers. Check the link to Khan Academy or run on a localhost (sorry!!)</li>
 					<li>Figuring out how Bezier curves and their control points work!</li>
 					<li>Selecting appropriate ranges for Bezier fn points to draw convincing seaweed</li>
 					<li>Figuring out how to embed the canvas in my own page with Processing.JS</li>
 					<li>...which required setting up my first local webserver using Python!!</li>
-				</ul></p>
+				</ul>
 			</section>
 		</article>
+		<!-- end fishtank article -->
 
 
 		<article>
+			<h2>Jssor.JS exercise: jQuery touch-slider</h2>
 			<section>
-				<h2>Jssor.JS exercise: jQuery touch-slider</h2>
 				<div id="slider1_container">
 					<!-- Slides Container -->
 					<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1000px; height: 562px;">
-						<div><img u="image" src="images/image1.jpg" /></div>
-						<div><img u="image" src="images/image2.jpg" /></div>
-						<div><img u="image" src="images/image3.jpg" /></div>
-						<div><img u="image" src="images/image4.jpg" /></div>
-						<div><img u="image" src="images/image5.jpg" /></div>
-						<div><img u="image" src="images/image6.jpg" /></div>
+						<div><img u="image" src="images/image1.jpg" alt="birth and burial" /></div>
+						<div><img u="image" src="images/image2.jpg" alt="takeoff"/></div>
+						<div><img u="image" src="images/image3.jpg" alt="a gamble of life and death"/></div>
+						<div><img u="image" src="images/image4.jpg" alt="steampunk underpass"/></div>
+						<div><img u="image" src="images/image5.jpg" alt="thunderstorm"/></div>
+						<div><img u="image" src="images/image6.jpg" alt="on your marks..."/></div>
 					</div>
 
 					<!-- Arrow Navigator Skin Begin -->
@@ -128,35 +130,110 @@
 				<h3 style="text-align: center; margin-top: 12px;">Swipe left or right on a touch device!</h3>
 				
 				<div class="column-container">
-				<div class="column">
-					<h3>Features</h3>
-					<ul>
-						<li>Touch-to-swipe on any touch-responsive device! :)</li>
-						<li>Buttons for left-right navigation if no touch capabilities</li>
-						<li>Simple CSS column layout in this explanation section! (unfortunately, coded to be flexible but not flexible as parent page is static for the slider :|)</li>
-					</ul>
-				</div>
+					<div class="column">
+						<h3>Features</h3>
+						<ul>
+							<li>Touch-to-swipe on any touch-responsive device! :)</li>
+							<li>Buttons for left-right navigation if no touch capabilities</li>
+							<li>Simple CSS column layout in this explanation section! (unfortunately, coded to be flexible but not flexible as parent page is static for the slider :|)</li>
+						</ul>
+					</div>	
 
-				<div class="column">
-					<h3>Challenges</h3>
-					<ul>
-						<li>[unresolved] Setting a scaling width broke my css; using <em>width: 100%</em> on either the parent container or the slide container left me with two 100px wide distorted images at a time. Images and article width are currently hard-coded to 980px/1000px width respectively. NOT GOOD!</li>
-						<li>Integrating the jssor plugin to my page</li>
-						<li>Using the plugin's documentation to implement the arrow nav provided</li>
-					</ul>
-				</div>
+					<div class="column">
+						<h3>Challenges</h3>
+						<ul>
+							<li>[unresolved] Setting a scaling width broke my css; using width: 100% on either the parent container or the slide container left me with two 100px wide distorted images at a time. Images and article width are currently hard-coded to 980px/1000px width respectively. NOT GOOD!</li>
+							<li>Integrating the jssor plugin to my page</li>
+							<li>Using the plugin's documentation to implement the arrow nav provided</li>
+						</ul>
+					</div>	
 
-				<div class="column c-end">
-					<h3>Afterthoughts</h3>
-					<p>So many little kinks, but I'm working them out and progress feels great. I'm excited for growth and every new thing that I learn - especially as this is starting to come more quickly, naturally, the more I practice and the more I build.</p>
+					<div class="column c-end">
+						<h3>Afterthoughts</h3>
+						<p>So many little kinks, but I'm working them out and progress feels great. I'm excited for growth and every new thing that I learn - especially as this is starting to come more quickly, naturally, the more I practice and the more I build.</p>
+					</div>
 				</div>
-				</div>
-				
-
 			</section>
 		</article>
-	</section>
+		<!-- end slider article -->
 
+
+		<article>
+			<h2>Project: Google Homepage HTML/CSS recreation (static)</h2>
+			<section>
+				<a href="http://www.rawgit.com/simplicitea/google-homepage/master/index.html">
+					<img src="images/google-homepage.png" alt="Google Homepage recreation screenshot">
+					<h3 style="text-align: center; margin-top: 12px;">Click to see me live via rawgit!</h3>
+				</a>
+
+				
+				<div class="column-container">
+					<div class="column">
+						<h3>Features</h3>
+						<ul>
+							<li>Clean, semantic HTML/CSS</li>
+							<li>Very close to spacing/styling used by Google</li>
+							<li>Scales well for desktop, laptop, tablet sized screens</li>
+						</ul>
+					</div>
+
+					<div class="column">
+						<h3>Challenges</h3>
+						<ul>
+							<li>Finding the correct spritesheet for the top-nav icons was tricky</li>
+							<li>Setting the spritesheet in the correct, sizable, positionable containers, then doing so with clean spacing</li>
+						</ul>
+					</div>
+
+					<div class="column c-end">
+						<h3>Afterthoughts</h3>
+						<p>This was a pretty fun little project! It's surprising how much code is sitting behind Google's homepage. What looks like a relatively simple page is hundreds upon hundreds of lines of source code to dig through. Thank god for in-browser developer tools! There are a billion deprecated CSS rules on every element and class it seems, so it was pretty wonderful to be able to look through computed styles of an element rather easily. The toplinks and using my first spritesheet for reactive icons was unexpectedly challenging. Once the top nav fell into place, the rest of the page was pretty well straightforward to build.</p>
+					</div>
+				</div>
+			</section>
+		</article>
+		<!-- end google homepage article -->
+
+		<article>
+			<h2>Project: Javascript/jQuery Etchasketch</h2>
+			<section id="etchasketch">
+
+				<!-- begin etchasketch 
+					 etchasketch container is empty 
+					 until populated by sketch.js -->
+				<div id="button-wrap">
+					<p>SQUARES PER SIDE: 
+						<input type="text" value="16" id="gridSize" name="gridSize">
+					</p>
+					
+					<button type="button" id="newGrid">New Grid</button>
+				</div>			
+
+				<div id="sketch-wrap"></div>
+				<!-- end etchasketch -->
+
+				
+
+				<p>Another fun one to implement! This was an exercise in programmatically writing HTML using jQuery, and binding event handlers to said HTML.</p> 
+				
+				<h3>Features:</h3>
+				<ul>
+					<li>Adds 20% opacity to elements on each mouseover</li>
+					<li>Customizable resolution! Giv'er a shot.</li>
+				</ul>
+
+				<h3>Challenges:</h3>
+				<ul>
+					<li>Not all resolutions divide 400x400 cleanly. If you enter a grid dimension that is not a factor of 400, you end up with a 1 pixel column of whitespace on the right.</li>
+					<li>The whole project was a bit of a flex for me -- planning out how to deal with styles and bind events to elements that aren't in the HTML until the page loads was a bit frustrating, but very satisfying upon completion.</li>
+				</ul>
+			</section>
+		</article>
+		<!-- end etchasketch article -->
+
+
+	</section>
+	<!-- end content section -->
 
 	<footer>
 	</footer>
