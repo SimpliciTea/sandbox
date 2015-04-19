@@ -2,6 +2,40 @@
 	box-sizing: border-box;
 }
 
+#top-links {
+	float: right;
+	height: 32px;
+}
+
+.icon-link {
+	position: relative;
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.icon-link-github {
+	background-image:url('https://assets-cdn.github.com/favicon.ico');
+}
+
+.icon-link-github:hover {
+	background-image:url('https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-EAF2F5-0bdc57d34b85c4a4de9d0d1db10cd70e8a95f33ff4f46c5a8c48b4bf4e5a9abe.gif');
+}
+
+.hover-text, .icon-link:hover .icon-link-github-pointers {
+	display:none;
+}
+
+.icon-link:hover .hover-text, .icon-link-github-pointers {
+	display:block;
+	position: absolute;
+	left: -45px;
+	text-align:right;	
+	color: #000;
+}
+
 body {
 	background-color: #FFF;
 	font-family: 'Open Sans', Tahoma, Arial, sans-serif;
