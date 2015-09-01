@@ -7,11 +7,18 @@
 	height: 32px;
 }
 
+#contact {
+	display: inline-block;
+	margin-left: 5px;
+	border-left: 2px solid black;
+}
+
 .icon-link {
 	position: relative;
 	display: inline-block;
 	height: 32px;
 	width: 32px;
+	margin-left: 60px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -34,6 +41,24 @@
 	position: absolute;
 	left: -45px;
 	text-align:right;	
+	color: #000;
+}
+
+.email-address {
+  display: block;
+  position: absolute;
+  left: -134px;
+  font-weight: bold;
+}
+
+.icon-link-email {
+	top: -6px;
+}
+
+.icon-link-email i {
+	position: relative;
+	top: -2px;
+	font-size: 32px;
 	color: #000;
 }
 
